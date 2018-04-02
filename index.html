@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+	<h1>Language Translator</h1>
+	<p>Example: Merry Christmas and Happy New Year</p>
 	<div id="main">
-		<textarea rows='4' cols='50' id="input"></textarea><br>
+		<textarea rows='8' cols='200' id="input" class="empty"></textarea><br>
 		<button class="button" id="spanish">Spanish</button><button class="button" id="french">French</button><button class="button" id="chinese">Chinese</button>
-		<div id="empty"></div>
 		<button id="clear" class="button">Clear</button>
+		<div id="empty"></div>
 	</div>
 <script src="main.js"></script>
 </body>

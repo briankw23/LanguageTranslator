@@ -2,8 +2,6 @@ var spanishdictionary = {merry: "Feliz", christmas:"navidad", and:"y", happy:"pr
 var frenchdictionary = {merry: "Joyeux", christmas:"Noel", and:"et", happy:"bonne", year:"an", new:"nouveau"};
 var chinesedictionary = {merry:"快活", christmas:"圣诞", and:"和", happy:"快乐", year:"新", new:"年"};
 
-
-
 function printToDom (String,getElementById){
 var myId = document.getElementById(getElementById);
 myId.innerHTML += String;
@@ -13,7 +11,7 @@ var inputtarget = document.getElementById("input");
 var spanish = document.getElementById("spanish");
 var french = document.getElementById("french");
 var chinese = document.getElementById("chinese");
-var empty = document.getElementById("empty");
+var emptydiv = document.getElementById("empty");
 var clearbtn =document.getElementById("clear");
 
 spanish.addEventListener("click", translateToSpanish);
@@ -26,7 +24,7 @@ function translateToSpanish(){
 	for (var i = 0; i < input.length; i++) {
 
 		if(spanishdictionary[input[i]]=== undefined){
-			domString += "<div id='red'>" + input[i]+ "('not found in dictionary')"+ "</div>";
+			domString += "<div id='red'>" + input[i]+ "('not found in Spanish dictionary')"+ "</div>";
 		}
 		else{
 			domString += spanishdictionary[input[i]]+ " ";
@@ -45,7 +43,7 @@ function translateToFrench(){
 	for (var i = 0; i < input.length; i++) {
 
 		if(frenchdictionary[input[i]]=== undefined){
-			domString += "<div id='red'>" + input[i]+ "('not found in dictionary')"+ "</div>";
+			domString += "<div id='red'>" + input[i]+ "('not found in French dictionary')"+ "</div>";
 		}
 		else{
 			domString += frenchdictionary[input[i]]+ " ";
@@ -64,7 +62,7 @@ function translateToChinese(){
 	for (var i = 0; i < input.length; i++) {
 
 		if(chinesedictionary[input[i]]=== undefined){
-			domString += "<div id='red'>" + input[i]+ "('not found in dictionary')"+ "</div>";
+			domString += "<div id='red'>" + input[i]+ "('not found in Chinese dictionary')"+ "</div>";
 		}
 		else{
 			domString += chinesedictionary[input[i]]+ " ";
@@ -76,8 +74,8 @@ function translateToChinese(){
 clearbtn.addEventListener("click", clear);
 
 function clear(){
-	empty.innerHTML = "";
-	input.innerHTML = "";
+	inputtarget.value = "";
+	emptydiv.innerHTML = "";
 };
 
 
