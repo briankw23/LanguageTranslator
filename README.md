@@ -10,7 +10,7 @@ Languages included:
 2. French
 3. Chinese
 
-##S creenshots
+## Screenshots
 
 ## How to run
 1. Go to: `https://www.npmjs.com/package/http-server` and install "http-server".  
